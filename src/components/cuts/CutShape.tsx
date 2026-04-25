@@ -10,6 +10,11 @@ type ShapeDef = {
 };
 
 const shapes: Record<string, ShapeDef> = {
+  miskevi: {
+    profile: <path d="M40,14 C48,20 54,32 54,50 C54,68 48,80 40,86 C32,80 26,68 26,50 C26,32 32,20 40,14 Z" />,
+    equatorCy: 50,
+    equatorRx: 14,
+  },
   kurevi: {
     profile: <ellipse cx="40" cy="50" rx="28" ry="34" />,
     equatorCy: 50,
