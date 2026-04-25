@@ -64,7 +64,7 @@ export default function HeroSection() {
           transition={{ duration: 1.2, delay: 0.3 }}
           className="text-[10px] uppercase text-gold mb-8 tracking-[0.3em]"
         >
-          El Yapımı · Premium Tesbih
+          Utku Mert Tunçay · El Yapımı Tesbih
         </motion.p>
 
         {/* Ana metin */}
@@ -78,9 +78,9 @@ export default function HeroSection() {
             Malzeme anlaşılmadan el kalkmaz.
           </p>
           <p className="text-base md:text-lg font-light leading-loose text-cream-dim max-w-lg mx-auto">
-            Kehribarında ışık var mı, gül odunundan koku çıkar mı —
-            bunu tezgah söylemez, el bilir.
-            Yıllar içinde, yalnızca el.
+            Utku Mert Tunçay her tesbihini bir kez yapar.
+            Her habbe ayrı bir malzeme, ayrı bir karar, ayrı bir sabır.
+            Elinize aldığınızda bunu anlarsınız.
           </p>
         </motion.div>
 
@@ -99,7 +99,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 1.4 }}
           className="font-serif italic text-sm md:text-base text-muted"
         >
-          Güzel bir tesbih elinden düşmez. Bunu kendi kendine anlarsın.
+          Güzel bir tesbih elinden düşmez. Bunu kendi kendine anlarsınız.
         </motion.p>
 
         {/* CTA */}
@@ -113,13 +113,13 @@ export default function HeroSection() {
             href="#galeri"
             className="rounded-full bg-gold text-ink px-8 py-3 text-xs uppercase tracking-[0.2em] font-medium hover:bg-gold-light transition-colors duration-300"
           >
-            Galeriyi Gör
+            Eserleri Gör
           </a>
           <a
-            href="#malzemeler"
+            href="#siparis"
             className="text-xs uppercase tracking-[0.2em] text-cream-dim hover:text-gold transition-colors duration-300 underline underline-offset-4 decoration-gold/30"
           >
-            Malzemeleri Keşfet
+            Sipariş Ver
           </a>
         </motion.div>
 

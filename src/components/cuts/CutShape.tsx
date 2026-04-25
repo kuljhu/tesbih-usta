@@ -1,160 +1,213 @@
 "use client";
 
-// Her kesim için x-y profili + z ekseni kesiti (ekvator elipsi) + eksen göstergesi
-// viewBox: "0 0 80 100" — merkez (40,50), şekil alanı (12,10)→(68,90)
+// Üç ortografik görünüm — her kesim için:
+// 1. Ön (Y-X düzlemi) : karakteristik profil silüeti
+// 2. Üst (X-Z düzlemi): tepeden yuvarlak kesit (faseteli hariç)
+// 3. 3B perspektif    : profil + yatay ekvator elipsleri
 
-type ShapeDef = {
-  profile: React.ReactNode;
-  equatorCy: number;  // ekvator elipsinin y konumu
-  equatorRx: number;  // ekvator elipsinin x yarıçapı
+type ViewSpec = {
+  front: React.ReactNode;   // Y-X profil şekli
+  equatorRx: number;        // en geniş noktada yarıçap (üst görünüm için)
+  equatorCy: number;        // en geniş noktanın Y konumu (0-66 ölçeğinde)
+  topOverride?: React.ReactNode; // faseteli için çokgen üst görünüm
 };
 
-const shapes: Record<string, ShapeDef> = {
-  miskevi: {
-    profile: <path d="M40,14 C48,20 54,32 54,50 C54,68 48,80 40,86 C32,80 26,68 26,50 C26,32 32,20 40,14 Z" />,
-    equatorCy: 50,
-    equatorRx: 14,
-  },
-  kurevi: {
-    profile: <ellipse cx="40" cy="50" rx="28" ry="34" />,
-    equatorCy: 50,
-    equatorRx: 28,
-  },
-  beyzi: {
-    profile: <ellipse cx="40" cy="50" rx="20" ry="36" />,
-    equatorCy: 50,
-    equatorRx: 20,
-  },
-  arpa: {
-    profile: <path d="M40,10 C44,22 44,78 40,90 C36,78 36,22 40,10 Z" />,
-    equatorCy: 50,
-    equatorRx: 4,
-  },
-  salgami: {
-    profile: <path d="M40,10 C65,20 66,80 40,90 C14,80 15,20 40,10 Z" />,
-    equatorCy: 50,
-    equatorRx: 26,
-  },
+// viewBox "0 0 50 66" — tüm ön/3B görünümler
+// viewBox "0 0 50 50" — üst görünüm
+const views: Record<string, ViewSpec> = {
+
+  // ── Sığırcık: yayvan (yassı bikoni — kısa ve geniş) ───────────────────
   sigaracik: {
-    // Spool/diabolo: geniş uçlar, dar orta
-    profile: (
-      <path d="
-        M14,12 C8,12 8,24 14,32 C20,38 20,42 14,48 C8,56 8,68 14,68
-        L66,68 C72,68 72,56 66,48 C60,42 60,38 66,32 C72,24 72,12 66,12 Z
-      " />
-    ),
-    equatorCy: 40,
-    equatorRx: 10,
+    front: <path d="M25,16 C46,17 47,49 25,50 C4,49 5,17 25,16 Z" />,
+    equatorRx: 22,
+    equatorCy: 33,
   },
+
+  // ── Şalgamî: dik (ince spindle — uzun ve dar) ─────────────────────────
+  salgami: {
+    front: <path d="M25,4 C37,10 38,56 25,62 C13,56 14,10 25,4 Z" />,
+    equatorRx: 13,
+    equatorCy: 33,
+  },
+
+  // ── Miskevi ────────────────────────────────────────────────────────────
+  miskevi: {
+    front: <path d="M25,10 C33,10 40,22 40,37 C40,50 33,58 25,58 C17,58 10,50 10,37 C10,22 17,10 25,10 Z" />,
+    equatorRx: 15,
+    equatorCy: 37,
+  },
+
+  // ── Kürevî: tam küre ───────────────────────────────────────────────────
+  kurevi: {
+    front: <circle cx="25" cy="33" r="22" />,
+    equatorRx: 22,
+    equatorCy: 33,
+  },
+
+  // ── Beyzi: dikey elips ─────────────────────────────────────────────────
+  beyzi: {
+    front: <ellipse cx="25" cy="33" rx="16" ry="28" />,
+    equatorRx: 16,
+    equatorCy: 33,
+  },
+
+  // ── Arpa: çok dar uzun ─────────────────────────────────────────────────
+  arpa: {
+    front: <path d="M25,5 C28,16 28,50 25,61 C22,50 22,16 25,5 Z" />,
+    equatorRx: 3,
+    equatorCy: 33,
+  },
+
+  // ── Armudî: armut ─────────────────────────────────────────────────────
   armudi: {
-    profile: <path d="M40,12 C46,12 60,28 60,60 A20,16 0 0,1 20,60 C20,28 34,12 40,12 Z" />,
-    equatorCy: 62,
-    equatorRx: 20,
+    front: <path d="M25,8 C31,8 40,22 40,48 A15,11 0 0,1 10,48 C10,22 19,8 25,8 Z" />,
+    equatorRx: 15,
+    equatorCy: 50,
   },
+
+  // ── Damla: gözyaşı ────────────────────────────────────────────────────
   damla: {
-    profile: <path d="M40,10 C46,14 60,46 54,70 A16,13 0 0,1 26,70 C20,46 34,14 40,10 Z" />,
-    equatorCy: 68,
-    equatorRx: 14,
+    front: <path d="M25,6 C30,10 40,36 35,54 A12,10 0 0,1 15,54 C10,36 20,10 25,6 Z" />,
+    equatorRx: 12,
+    equatorCy: 52,
   },
+
+  // ── Kütük: silindir ───────────────────────────────────────────────────
   kutuk: {
-    profile: <rect x="14" y="16" width="52" height="68" rx="5" ry="5" />,
-    equatorCy: 50,
-    equatorRx: 26,
+    front: <rect x="8" y="12" width="34" height="42" rx="3" />,
+    equatorRx: 17,
+    equatorCy: 33,
   },
+
+  // ── Fıçı: kavisli silindir ────────────────────────────────────────────
   fici: {
-    profile: <path d="M14,16 H66 C74,28 74,44 70,50 C74,56 74,72 66,84 H14 C6,72 6,56 10,50 C6,44 6,28 14,16 Z" />,
-    equatorCy: 50,
-    equatorRx: 30,
+    front: <path d="M8,12 H42 C49,20 51,27 49,33 C51,39 49,46 42,54 H8 C1,46 -1,39 1,33 C-1,27 1,20 8,12 Z" />,
+    equatorRx: 24,
+    equatorCy: 33,
   },
+
+  // ── Faseteli: oktagon + iç çizgiler ───────────────────────────────────
   faseteli: {
-    profile: (
+    front: (
       <>
-        <polygon points="40,10 62,20 68,50 62,80 40,90 18,80 12,50 18,20" />
-        {/* İç faset çizgileri */}
-        <line x1="40" y1="10" x2="40" y2="90" strokeDasharray="none" strokeWidth="0.6" />
-        <line x1="12" y1="50" x2="68" y2="50" strokeDasharray="none" strokeWidth="0.6" />
-        <line x1="18" y1="20" x2="62" y2="80" strokeDasharray="none" strokeWidth="0.4" />
-        <line x1="62" y1="20" x2="18" y2="80" strokeDasharray="none" strokeWidth="0.4" />
+        <polygon points="25,4 40,11 44,33 40,55 25,62 10,55 6,33 10,11" />
+        <line x1="25" y1="4"  x2="25" y2="62" strokeWidth="0.5" />
+        <line x1="6"  y1="33" x2="44" y2="33" strokeWidth="0.5" />
+        <line x1="10" y1="11" x2="40" y2="55" strokeWidth="0.4" />
+        <line x1="40" y1="11" x2="10" y2="55" strokeWidth="0.4" />
       </>
     ),
-    equatorCy: 50,
-    equatorRx: 28,
+    equatorRx: 19,
+    equatorCy: 33,
+    topOverride: (
+      <polygon points="25,6 38,11 44,25 38,39 25,44 12,39 6,25 12,11" />
+    ),
   },
 };
 
+// ── Tek kesim için üçlü görünüm bileşeni ──────────────────────────────────
 type Props = {
   cutId: string;
-  size?: number;
+  size?: number; // ön/3B görünüm yüksekliği (piksel)
 };
 
-export default function CutShape({ cutId, size = 120 }: Props) {
-  const shape = shapes[cutId];
-  if (!shape) return null;
+const STROKE   = "#c9a84c";
+const STROKE2  = "#e2c97e";
+const OPACITY  = 0.85;
+const GUIDE_OP = 0.12;
+const FILL     = "rgba(201,168,76,0.07)";
 
-  const gradId = `grad-${cutId}`;
-  const fillId = `fill-${cutId}`;
+export default function CutShape({ cutId, size = 58 }: Props) {
+  const spec = views[cutId];
+  if (!spec) return null;
+
+  const w    = size * (50 / 66);   // ön/3B genişlik
+  const h    = size;               // ön/3B yükseklik
+  const sq   = w;                  // üst görünüm kare
+
+  const eqRy = Math.max(spec.equatorRx * 0.22, 2.5); // perspektif elips yüksekliği
 
   return (
-    <svg
-      viewBox="0 0 80 100"
-      width={size}
-      height={size * 1.25}
-      aria-hidden="true"
-      className="overflow-visible"
-    >
-      <defs>
-        {/* Radyal dolgu — 3D ışık hissi */}
-        <radialGradient id={gradId} cx="38%" cy="35%" r="60%">
-          <stop offset="0%"   stopColor="#c9a84c" stopOpacity="0.18" />
-          <stop offset="60%"  stopColor="#c9a84c" stopOpacity="0.06" />
-          <stop offset="100%" stopColor="#0d0905" stopOpacity="0.4" />
-        </radialGradient>
-        {/* Kırpma maskesi — şekle göre */}
-        <clipPath id={`clip-${cutId}`}>
-          <rect x="0" y="0" width="80" height="100" />
-        </clipPath>
-      </defs>
+    <div className="flex items-end gap-2.5">
 
-      {/* Eksen kılavuz çizgileri */}
-      <g stroke="#c9a84c" strokeOpacity="0.12" strokeWidth="0.5" strokeDasharray="3,4">
-        <line x1="40" y1="2"  x2="40" y2="98"  /> {/* Y ekseni */}
-        <line x1="2"  y1="50" x2="78" y2="50"  /> {/* X ekseni */}
-      </g>
+      {/* ── 1. ÖN GÖRÜNÜM (Y-X düzlemi) ── */}
+      <div className="flex flex-col items-center gap-1">
+        <svg viewBox="0 0 50 66" width={w} height={h} aria-hidden="true">
+          {/* Eksen kılavuzları */}
+          <g stroke={STROKE} strokeOpacity={GUIDE_OP} strokeWidth="0.5" strokeDasharray="2,3">
+            <line x1="25" y1="2"  x2="25" y2="64" />
+            <line x1="2"  y1="33" x2="48" y2="33" />
+          </g>
+          {/* Dolgu */}
+          <g fill={FILL} stroke="none">{spec.front}</g>
+          {/* Kontur */}
+          <g fill="none" stroke={STROKE} strokeWidth="1.2" strokeOpacity={OPACITY}
+             strokeLinejoin="round" strokeLinecap="round">
+            {spec.front}
+          </g>
+          {/* Eksen etiketleri */}
+          <text x="44" y="36" fontSize="6" fill={STROKE} fillOpacity="0.45" fontFamily="system-ui">X</text>
+          <text x="22" y="7"  fontSize="6" fill={STROKE} fillOpacity="0.45" fontFamily="system-ui">Y</text>
+        </svg>
+        <span className="text-[8px] uppercase tracking-widest text-muted/40">Y·X</span>
+      </div>
 
-      {/* Profil dolgusu */}
-      <g fill={`url(#${gradId})`} stroke="none">
-        {shape.profile}
-      </g>
+      {/* ── 2. ÜST GÖRÜNÜM (X-Z düzlemi) ── */}
+      <div className="flex flex-col items-center gap-1">
+        <svg viewBox="0 0 50 50" width={sq} height={sq} aria-hidden="true">
+          {/* Eksen kılavuzları */}
+          <g stroke={STROKE} strokeOpacity={GUIDE_OP} strokeWidth="0.5" strokeDasharray="2,3">
+            <line x1="25" y1="2"  x2="25" y2="48" />
+            <line x1="2"  y1="25" x2="48" y2="25" />
+          </g>
+          {/* Kesit */}
+          <g fill={FILL} stroke="none">
+            {spec.topOverride ?? <circle cx="25" cy="25" r={spec.equatorRx} />}
+          </g>
+          <g fill="none" stroke={STROKE} strokeWidth="1.2" strokeOpacity={OPACITY}>
+            {spec.topOverride ?? <circle cx="25" cy="25" r={spec.equatorRx} />}
+          </g>
+          {/* Eksen etiketleri */}
+          <text x="44" y="28" fontSize="6" fill={STROKE} fillOpacity="0.45" fontFamily="system-ui">X</text>
+          <text x="22" y="7"  fontSize="6" fill={STROKE2} fillOpacity="0.4" fontFamily="system-ui">Z</text>
+        </svg>
+        <span className="text-[8px] uppercase tracking-widest text-muted/40">X·Z</span>
+      </div>
 
-      {/* Profil konturu */}
-      <g
-        fill="none"
-        stroke="#c9a84c"
-        strokeWidth="1.2"
-        strokeLinejoin="round"
-        strokeLinecap="round"
-        strokeOpacity="0.85"
-      >
-        {shape.profile}
-      </g>
+      {/* ── 3. 3B PERSPEKTİF ── */}
+      <div className="flex flex-col items-center gap-1">
+        <svg viewBox="0 0 50 66" width={w} height={h} aria-hidden="true">
+          {/* Dolgu */}
+          <g fill={FILL} stroke="none">{spec.front}</g>
+          {/* Profil konturu */}
+          <g fill="none" stroke={STROKE} strokeWidth="1.1" strokeOpacity={OPACITY * 0.8}
+             strokeLinejoin="round" strokeLinecap="round">
+            {spec.front}
+          </g>
+          {/* Ekvator elipsi — Z derinliğini gösterir */}
+          <ellipse
+            cx="25" cy={spec.equatorCy}
+            rx={spec.equatorRx} ry={eqRy}
+            fill="none"
+            stroke={STROKE2} strokeWidth="1" strokeOpacity="0.65"
+            strokeDasharray="2.5,2.5"
+          />
+          {/* Uç elipsleri (çok küçük) */}
+          {spec.equatorCy !== 33 ? null : (
+            <>
+              <ellipse cx="25" cy={spec.equatorCy - 22} rx={2} ry={1}
+                fill="none" stroke={STROKE} strokeWidth="0.7" strokeOpacity="0.35" />
+              <ellipse cx="25" cy={spec.equatorCy + 22} rx={2} ry={1}
+                fill="none" stroke={STROKE} strokeWidth="0.7" strokeOpacity="0.35" />
+            </>
+          )}
+          {/* Z etiketi — ekvator yanında */}
+          <text x={25 + spec.equatorRx + 2} y={spec.equatorCy + 3}
+            fontSize="5.5" fill={STROKE2} fillOpacity="0.45" fontFamily="system-ui">Z</text>
+        </svg>
+        <span className="text-[8px] uppercase tracking-widest text-muted/40">3B</span>
+      </div>
 
-      {/* Z ekseni: ekvator elipsi (kesik çizgi) */}
-      <ellipse
-        cx="40"
-        cy={shape.equatorCy}
-        rx={shape.equatorRx}
-        ry={Math.max(shape.equatorRx * 0.18, 2.5)}
-        fill="none"
-        stroke="#e2c97e"
-        strokeWidth="0.9"
-        strokeDasharray="3,3"
-        strokeOpacity="0.6"
-      />
-
-      {/* Eksen etiketleri */}
-      <text x="74" y="53" fontSize="7" fill="#c9a84c" fillOpacity="0.5" fontFamily="sans-serif">X</text>
-      <text x="37" y="8"  fontSize="7" fill="#c9a84c" fillOpacity="0.5" fontFamily="sans-serif">Y</text>
-      <text x="74" y={shape.equatorCy + 3} fontSize="6" fill="#e2c97e" fillOpacity="0.45" fontFamily="sans-serif">Z</text>
-    </svg>
+    </div>
   );
 }

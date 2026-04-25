@@ -22,8 +22,9 @@ export default function MaterialsSection() {
           Malzemeler & Özellikleri
         </h2>
         <p className="mt-4 mx-auto max-w-lg text-base text-muted leading-relaxed">
-          Temelde üç tip malzeme vardır: ahşap, kemik, taş.
-          Geri kalan her şey bu üçünün gölgesinde konuşlanır.
+          Ahşap, kemik, taş — tesbih bu üç kökten büyür.
+          Her malzemenin kokusu, ağırlığı ve geçmişi birbirinden farklı.
+          Sizin için hangisi olduğunu bulmak için okuyun.
         </p>
       </motion.div>
 

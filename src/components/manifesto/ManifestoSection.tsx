@@ -35,16 +35,16 @@ export default function ManifestoSection() {
         style={{ scale, opacity }}
         className="relative z-10 px-6 max-w-4xl mx-auto text-center"
       >
-        <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-8">Usta Sözü</p>
+        <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-8">Utku Mert Tunçay</p>
 
         <blockquote className="font-serif text-3xl md:text-5xl lg:text-6xl font-light leading-snug text-cream">
-          Her tesbihimiz imamesinde
+          Her tesbih bir kez yapılır.
           <br />
-          <em className="text-gold not-italic">imzasını taşır.</em>
+          <em className="text-gold not-italic">Bir daha yapılmaz.</em>
         </blockquote>
 
         <p className="mt-8 font-serif italic text-base md:text-lg text-muted">
-          Aldığında bakarsın, görürsün.
+          İmamesindeki imzayı elinize aldığınızda görürsünüz.
         </p>
       </motion.div>
     </section>

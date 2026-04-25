@@ -20,7 +20,9 @@ export default function GallerySection() {
           Galeri
         </h2>
         <p className="mt-4 mx-auto max-w-md text-base text-muted leading-relaxed">
-          Her tesbih elinden bir kez çıkar. Aynısı yapılmaz.
+          Her tesbih bir kez yapılır, aynısı yapılmaz.
+          Bunlar şimdiye kadar çıkanlardan.
+          Sizin için hangisini yapalım?
         </p>
       </motion.div>
 
@@ -43,7 +45,7 @@ export default function GallerySection() {
         transition={{ delay: 0.4 }}
         className="text-center mt-12 text-xs text-muted/40 italic px-4"
       >
-        Atölye fotoğrafları ekleniyor — yakında.
+        Fotoğraflar ekleniyor.
       </motion.p>
     </section>
   );

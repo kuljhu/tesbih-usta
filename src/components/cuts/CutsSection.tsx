@@ -28,8 +28,9 @@ export default function CutsSection() {
           Habbe Kesim Çeşitleri
         </h2>
         <p className="mt-4 mx-auto max-w-lg text-base text-muted leading-relaxed">
-          Her kesim bir okuldur. Klasik Osmanlı atölyelerinde form, malzemenin
-          tabiatına göre seçilirdi — estetik değil, anlam önce gelirdi.
+          Aynı malzeme farklı kesimde farklı hissettirir.
+          Osmanlı atölyelerinde her kesimin bir adı, bir sebebi vardı — bugün hâlâ geçerlidir.
+          Eline en iyi oturanı buradan tanıyın.
         </p>
       </motion.div>
 
