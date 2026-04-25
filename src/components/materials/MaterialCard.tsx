@@ -78,7 +78,9 @@ export default function MaterialCard({ material, index }: Props) {
         <dl className="grid grid-cols-2 gap-x-4 gap-y-3 text-sm">
           <div>
             <dt className="text-[11px] uppercase tracking-widest text-muted">Sertlik</dt>
-            <dd className="mt-0.5 text-cream-dim">{material.hardness}</dd>
+            <dd className="mt-0.5 text-cream-dim font-mono text-xs">
+              {material.hardness}
+            </dd>
           </div>
           <div>
             <dt className="text-[11px] uppercase tracking-widest text-muted">Renk</dt>

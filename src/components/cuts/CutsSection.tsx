@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { cuts, eraLabel, type CutEra } from "@/data/cuts";
+import CutShape from "./CutShape";
 
 const eraColor: Record<CutEra, string> = {
   "klasik-osmanlı":  "text-gold border-gold/40",
@@ -50,13 +51,12 @@ export default function CutsSection() {
               style={{ background: "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 70%)" }}
             />
 
-            {/* Üst satır: soyut form + başlık */}
+            {/* Üst satır: SVG form + başlık */}
             <div className="relative flex items-center gap-4">
-              {/* CSS habbe formu */}
-              <div
-                className="shrink-0 w-10 h-10 bg-gradient-to-br from-gold/30 to-gold-dim/20 border border-gold/20 group-hover:border-gold/50 transition-all duration-500"
-                style={{ borderRadius: cut.shape }}
-              />
+              {/* SVG habbe formu */}
+              <div className="shrink-0 group-hover:scale-105 transition-transform duration-500">
+                <CutShape cutId={cut.id} size={56} />
+              </div>
               <div className="min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
                   <h3 className="font-serif text-xl md:text-2xl font-medium text-cream leading-tight">

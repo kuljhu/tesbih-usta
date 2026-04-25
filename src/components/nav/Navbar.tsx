@@ -74,7 +74,7 @@ export default function Navbar() {
                 alt="UMT — Utku Mert Tunçay"
                 width={52}
                 height={52}
-                className="rounded-full opacity-90 group-hover:opacity-100 transition-opacity duration-300 invert brightness-90 group-hover:brightness-100"
+                className="rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300 mix-blend-screen"
                 priority
               />
               <span className="hidden md:block text-[9px] uppercase tracking-[0.3em] text-cream/50 group-hover:text-gold/70 transition-colors duration-300">
@@ -132,7 +132,7 @@ export default function Navbar() {
             alt="UMT"
             width={80}
             height={80}
-            className="rounded-full invert opacity-70"
+            className="rounded-full opacity-80 mix-blend-screen"
           />
         </motion.div>
 
