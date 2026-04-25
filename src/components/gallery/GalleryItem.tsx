@@ -47,12 +47,12 @@ export default function GalleryItemCard({ item, index }: Props) {
             alt={item.alt}
             fill
             sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.25]"
           />
         ) : (
           /* Placeholder — fotoğraf gelene kadar */
           <div
-            className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-110"
+            className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.25]"
             style={{
               background: `radial-gradient(ellipse at 40% 40%, ${accent}cc 0%, ${accent}55 40%, #0d0905 100%)`,
             }}
