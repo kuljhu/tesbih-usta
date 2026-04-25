@@ -20,16 +20,6 @@ export const eraLabel: Record<CutEra, string> = {
 
 export const cuts: Cut[] = [
   {
-    id: "miskevi",
-    name: "Miskevi",
-    ottoman: "مسکوی",
-    era: "klasik-osmanlı",
-    form: "Ortası şişkin, uçları hafif sivri — misk tohumuna öykünür",
-    note: "İmparatorluk atölyelerinin imzası sayılır. Adı misk kokusundan gelir; saray tesbihlerinde kehribar ve öd ağacıyla birlikte kullanılmıştır. Koleksiyoncuların en çok aradığı Osmanlı kesimi.",
-    materials: ["Kehribar", "Öd Ağacı", "Gül Odunu", "Katalin"],
-    shape: "50% 50% 50% 50% / 40% 40% 60% 60%",
-  },
-  {
     id: "salgami",
     name: "Şalgamî",
     ottoman: "شلغمی",
