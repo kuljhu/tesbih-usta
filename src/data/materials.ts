@@ -43,7 +43,7 @@ export const materials: Material[] = [
     scent: "Tatlı, hafif çiçeksi — kalıcı",
     color: "Açık pembe — koyu kızıl kahve",
     rarity: "nadir",
-    note: "CITES koruma listesindeki bu nadir odun, her zikir seansında hafif kokusuyla zihinsel dinginlik sağlar. Habbeler kullandıkça parlar.",
+    note: "CITES koruma listesinde. Kokuyu bir kez aldınız mı, tesbihin neden gül odunundan yapıldığını anlarsınız — her zikir seansında hafif çiçeksi bir his. Habbeler kullandıkça parlar, değerlenir.",
     accent: "#8b4254",
   },
   {
@@ -55,7 +55,7 @@ export const materials: Material[] = [
     scent: "Nötr — hafif toprak",
     color: "Jet siyah",
     rarity: "nadir",
-    note: "Dünyanın en ağır ve en sert odunlarından biri. Polisajla elde edilen ayna parlaklığı ve soğuk dokusuyla zarafeti simgeler.",
+    note: "Dünyanın en ağır ve en sert odunlarından biri. Ele aldığınızda soğukluğu fark edersiniz — bu abanozun sizi tartmasıdır. Polisajla gelen ayna parlaklığı bir hata affetmez; ustanın elini doğrudan size taşır.",
     accent: "#1a1208",
   },
   {
@@ -67,7 +67,7 @@ export const materials: Material[] = [
     scent: "Derin, dumanlı, odunsu — dünyaca en değerli koku",
     color: "Koyu kahve — neredeyse siyah",
     rarity: "çok nadir",
-    note: "Phialophora fungi enfeksiyonuna yanıt olarak reçineyle dolan ağaç özünden elde edilir. Gram başına altından pahalı olabilen bir hammadde.",
+    note: "Phialophora fungi enfeksiyonuna yanıt olarak ağacın ürettiği reçineden elde edilir. Gram başına altından pahalı olabilir — ama kokusu bir kez elinizdeyken anlarsınız neden. Üzerinizde kalır. Bu isteyerek yapılmış bir şeydir.",
     accent: "#3d1f0d",
   },
   {
@@ -79,7 +79,7 @@ export const materials: Material[] = [
     scent: "Hafif, kendine özgü odunsu",
     color: "Açık sarı — bal rengi",
     rarity: "nadir",
-    note: "Türkiye'nin en sert ve en ağır odunlarından biri. Büyük boy şimşir bulmak giderek zorlaşıyor; elde kalan malzeme değerleniyor.",
+    note: "Türkiye'nin en sert ve en ağır odunlarından biri. Büyük boy şimşir bulmak giderek zorlaşıyor — her büyük parça kendi içinde bir son. Elde kalan değerleniyor; bu da haklı.",
     accent: "#c8a84b",
   },
   {
@@ -91,7 +91,7 @@ export const materials: Material[] = [
     scent: "Kremsi, odunsu — meditasyona eşlik eden koku",
     color: "Açık bej — sarımsı kahve",
     rarity: "nadir",
-    note: "Zihni sakinleştirdiğine inanılan kokusu, yüzyıllardır tapınak ve tekkelerde kullanılmasını sağlamıştır. Mysore sandali en değerli çeşit.",
+    note: "Yüzyıllardır tapınak ve tekkelerde kullanılıyor — boşuna değil. Sandal kokusunun zihni açtığına dair bir şey var; elinizdeyken fark edersiniz. Mysore sandali en değerli çeşit.",
     accent: "#c4956a",
   },
   {
@@ -103,7 +103,7 @@ export const materials: Material[] = [
     scent: "Gül odununa benzer, hafif meyvemsi",
     color: "Mor-kahve — koyu vişne",
     rarity: "çok nadir",
-    note: "Gül odunuyla akraba bu ağaç küresel koruma altında. Elde kalan stoklar koleksiyoncuların gözdesi; her habbe birbirinden farklı damar desenine sahip.",
+    note: "Gül odunuyla akraba, küresel koruma altında. Elde kalan stoklar azaldıkça değer artıyor. Her habbede farklı bir desen — ikincisi yok, çünkü ikincisi yapılamaz.",
     accent: "#5c2d4a",
   },
   {
@@ -115,7 +115,7 @@ export const materials: Material[] = [
     scent: "Hafif zeytinyağı — neredeyse nötr",
     color: "Sarı-yeşil — koyu kahve, yoğun damarlı",
     rarity: "yaygın",
-    note: "Akdeniz'in kadim ağacı. Her habbe özgün damar deseniyle tekil bir görünüme sahip. Mukaddes coğrafyalarda yetişen ağaçlardan üretilenler ayrıca değerlenir.",
+    note: "Akdeniz'in kadim ağacı. Ne kadar yaşlıysa desen o kadar derin, o kadar anlamlı. Her habbe başka görünür — mukaddes coğrafyalarda yetişen ağaçlardan üretilenler ayrıca değerlenir.",
     accent: "#6b7c3a",
   },
   {
@@ -127,7 +127,7 @@ export const materials: Material[] = [
     scent: "Nötr",
     color: "Açık kahve → kullandıkça koyu kahve",
     rarity: "yaygın",
-    note: "Osmanlı hekimlerinin tercihiydi — antimikrobiyal özelliğiyle ünlüdür. Kullanıldıkça koyulaşır ve değer kazanır; her tesbih sahibinin eliyle renklenir.",
+    note: "Osmanlı hekimlerinin tercihiydi — antimikrobiyal özelliğiyle ünlüdür. Ama asıl özelliği şu: kullandıkça koyulaşır, elin geçmişini tutar. Her tesbih sahibiyle birlikte renklenir.",
     accent: "#7a4f28",
   },
   {
@@ -139,7 +139,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Krem beyaz — fildişi",
     rarity: "yaygın",
-    note: "\"Bitkisel fildişi\" olarak da bilinir. Gerçek fildişinden ayırt edilmesi son derece güçtür. Fil avına alternatif olarak 19. yüzyılda keşfedilmiştir.",
+    note: "\"Bitkisel fildişi\" derler. Gerçek fildişinden ayırt etmek neredeyse imkânsız — elde hissi, ağırlığı, rengi. Fil avına etik bir alternatif olarak 19. yüzyılda keşfedildi; yerinde bir keşifti.",
     accent: "#d4c5a0",
   },
   {
@@ -151,7 +151,7 @@ export const materials: Material[] = [
     scent: "Hafif tatlı, odunsu",
     color: "Koyu kahve — neredeyse siyah",
     rarity: "yaygın",
-    note: "Tesbihin başladığı yerdir. Veysel Karanî'nin ilk sayı tuttuğu malzeme olduğu rivayet edilir. Mütevazı görünümü, kökeni bilenler için ayrı bir anlam taşır.",
+    note: "Tesbihin başladığı yer burası. Veysel Karanî'nin ilk sayı tuttuğu malzeme olduğu rivayet edilir. Mütevazı, sade — kökeni bilenler için bu sadelik başlı başına bir değerdir.",
     accent: "#3a2010",
   },
 
@@ -165,7 +165,7 @@ export const materials: Material[] = [
     scent: "Hafif reçineli, ısıyla belirginleşir",
     color: "Limon sarısı — koyu kiraz arası, 256 ton",
     rarity: "nadir",
-    note: "40–60 milyon yıllık çam reçinesinin fosilleşmesiyle oluşur. Tuz suyunda yüzer, sürtünmeyle statik elektrik üretir — bu iki test sahteyi ayırt eder.",
+    note: "40–60 milyon yıllık çam reçinesinin fosilleşmesiyle oluşur. Elde ısınınca kokuyu bırakır — o an, milyonlarca yıl önce başlayan bir şeyin devamıdır. Tuz suyunda yüzer, sürtünmeyle statik elektrik üretir; bu iki test sahteyi ayırt eder.",
     accent: "#c9822a",
   },
   {
@@ -177,7 +177,7 @@ export const materials: Material[] = [
     scent: "Güçlü reçineli, tütsü benzeri",
     color: "Şeffaf limon — koyu bal",
     rarity: "çok nadir",
-    note: "Baltık kehribarından farklı kimyasal yapısı ve daha güçlü kokusuyla ayrışır. Yemen damla kehribarı koleksiyoncular arasında en çok aranan çeşit.",
+    note: "Baltık kehribarından farklı kimyasal yapısı ve çok daha güçlü kokusuyla ayrışır. Yemen damla kehribarını koleksiyoncular yıllarca arar — elinizde tuttuğunuzu bilin.",
     accent: "#d4a017",
   },
   {
@@ -189,7 +189,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Krem beyaz — pembe iridyum",
     rarity: "yaygın",
-    note: "İnci istiridyesinin iç tabakasından elde edilir. Işıkla birlikte canlanan gökkuşağı yansımaları her açıdan farklı bir görünüm yaratır.",
+    note: "İnci istiridyesinin iç tabakasından elde edilir. Işık nereden gelirse gelsin farklı bir renk çıkar. Doyulmaz bir malzeme — izlemekten bıkamazsınız.",
     accent: "#d4c5b0",
   },
   {
@@ -201,7 +201,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Kan kırmızısı — açık pembe mercan",
     rarity: "çok nadir",
-    note: "Corallium rubrum türü el ile toplanır, her habbesi ayrı ayrı şekillendirilir. Derinliğine göre rengi değişen organik bir deniz hazinesi.",
+    note: "Corallium rubrum türü, deniz dibinden el ile toplanır. Her habbesi ayrı ayrı şekillendirilir — her biri bir süreçti, bir karardı. Derinliğine göre rengi değişir; tekrar edilemez.",
     accent: "#c0392b",
   },
   {
@@ -213,7 +213,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Krem — hafif sarımsı, kahverengi damarlar",
     rarity: "çok nadir",
-    note: "10.000+ yıl önce nesli tükenen mamutların buzul altından çıkan dişidir. Gerçek fildişiyle aynı dokuya sahip, yasal ve etik tek fildişi alternatifi.",
+    note: "10.000 yılı aşkın süre Sibirya buzulunun altındaydı. Gerçek fildişiyle aynı doku, aynı ağırlık — şimdi elde. Bu kadar eski bir şeyi tutmak farklı hissettiriyor.",
     accent: "#c9b99a",
   },
   {
@@ -225,7 +225,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Krem beyaz — hafif sarı",
     rarity: "yaygın",
-    note: "Osmanlı tesbihçiliğinin geleneksel malzemesi. Hafifliği ve işlenebilirliğiyle ustalar arasında tercih edilir; yaşlandıkça fildişi tonlarına döner.",
+    note: "Osmanlı tesbihçiliğinin geleneksel malzemesi — sebebi hâlâ geçerli. Hafif, işlenebilir, zamanla fildişi tonlarına döner. Zaman onu güzelleştirir.",
     accent: "#d6c9a8",
   },
   {
@@ -237,7 +237,7 @@ export const materials: Material[] = [
     scent: "İşleme sırasında kendine özgü koku",
     color: "Siyah — kahverengi, yarı şeffaf",
     rarity: "yaygın",
-    note: "Manda boynuzu ısıyla şekillendirilebilir; her habbe içinden geçen ışıkla farklı bir derinlik kazanır. Osmanlı atölyelerinin temel malzemelerinden biri.",
+    note: "Manda boynuzu ısıyla şekillenir, soğuyunca hafızasını korur. Her habbe içinden geçen ışıkla farklı bir derinlik kazanır. Osmanlı atölyelerinin temeliydi — bugün de aynı sebebi taşıyor.",
     accent: "#2a1f0f",
   },
 
@@ -251,7 +251,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Yoğun mat siyah",
     rarity: "nadir",
-    note: "Yalnızca Türkiye'nin Oltu ilçesinden çıkar. Jet olarak da bilinen bu organik mineralin dünya rezervlerinin büyük çoğunluğu bu coğrafyadadır.",
+    note: "Dünyanın tek yerinden çıkar — Erzurum'un Oltu ilçesi. Her gram bir coğrafyadır. Dünya rezervlerinin büyük çoğunluğu bu topraklarda; bir gün biter.",
     accent: "#1c1c1c",
   },
   {
@@ -263,7 +263,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Gökyüzü mavisi — yeşilimsi mavi",
     rarity: "nadir",
-    note: "Bakır minerallerinin oluşturduğu opak taş. İran Nişapur firuzesi dünyada en aranan ve en değerli çeşit; matriks desenleri her taşı benzersiz kılar.",
+    note: "Bakır minerallerinden oluşan opak bir taş. İran sarayından geçmiş, koleksiyonlarda kalmış — bugün elde. Nişapur firuzesinin matriks desenleri her taşı tekil kılar; iki tanesi aynı değildir.",
     accent: "#2980b9",
   },
   {
@@ -275,7 +275,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Kırmızı — turuncu — sarı, yarı şeffaf",
     rarity: "yaygın",
-    note: "İslam geleneğinde özel yeri olan akik, Hz. Peygamber'in yüzük taşı olarak rivayet edilir. Yemen akiki rengi ve damarıyla en değerli çeşit kabul edilir.",
+    note: "Hz. Peygamber'in yüzük taşı olarak rivayet edilir. Bu kadar köklü bir tercih boşuna olmaz. Yemen akiki rengi ve damarıyla en değerlisi — onu elde tutmak tarihin içinde durmak gibi.",
     accent: "#c0392b",
   },
   {
@@ -287,7 +287,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Koyu gece mavisi, altın pirit noktaları",
     rarity: "nadir",
-    note: "5.000 yıldır Badehşan madenlerinden çıkarılan bu taş, Osmanlı minyatürlerindeki mavinin kaynağıdır. Altın pirit noktaları \"yıldızlı gece\" görünümü verir.",
+    note: "5.000 yıldır aynı Badehşan madenlerinden çıkıyor. Osmanlı minyatürlerindeki o mavi buradandı. Altın pirit noktaları yıldızlı gece gibi — bakınca bırakmak zor.",
     accent: "#1a3a6e",
   },
   {
@@ -299,7 +299,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Derin siyah, beyaz bantlar",
     rarity: "yaygın",
-    note: "Akikin siyah ve beyaz bantlı çeşidi. Derin rengi ve yüksek polisaj kabiliyetiyle lüks tesbihlerde abanoz ve oltu taşına rakip.",
+    note: "Akikin siyah ve beyaz bantlı çeşidi. Abanoz kadar siyah, ondan daha sert — ikisi arasında tercih zordur. Yüksek polisajla elde edilen derinlik bakışı tutar.",
     accent: "#1a1a1a",
   },
   {
@@ -311,7 +311,7 @@ export const materials: Material[] = [
     scent: null,
     color: "Açık lavanta — koyu mor",
     rarity: "yaygın",
-    note: "Kuvars ailesinin mor üyesi. Kesafeti ve renk dağılımı fiyatı belirler; koyu ve eşit renkli taşlar koleksiyonculuk için tercih edilir.",
+    note: "Kuvars ailesinin mor üyesi. Lavantadan koyu mora değişen tonlar — her açıda başka bir tesbih. Koyu ve eşit renkli taşlar koleksiyonculuk için tercih edilir; rengin derinliği değerin derinliğidir.",
     accent: "#6b3fa0",
   },
 
@@ -325,7 +325,7 @@ export const materials: Material[] = [
     scent: "Isıtılınca tatlı fenolik koku — kehribarı anımsatır",
     color: "Her renk; zamanla amber tonlarına dönüşür",
     rarity: "nadir",
-    note: "1950'lerde üretimi durdu. Gerçek katalin zamanla renk değiştirir — bu \"yaşlanma\" koleksiyoncular tarafından güzellik sayılır. Sahte plastikten fenolik kokusuyla ayrılır.",
+    note: "1950'de üretimi durdu — stok giderek azalıyor. Gerçek katalin zamanla renk değiştirir; koleksiyoncular bu yaşlanmayı güzellik sayar. Isıtılınca bıraktığı fenolik koku sahte plastikten ayırt ettirir.",
     accent: "#c9942a",
   },
   {
@@ -337,7 +337,7 @@ export const materials: Material[] = [
     scent: "Hafif süt kokusu — işleme sırasında",
     color: "Her renkte; mat ve derin tonlar karakteristik",
     rarity: "çok nadir",
-    note: "Süt proteini kazeinden üretilir; yaklaşık 1 yıl pres altında sertleştirilir. İlk sentetik plastiklerden biri. Üretimi çoktan durdu, elde kalanı antika değer taşır.",
+    note: "Süttan yapıldı — kazein proteini, bir yıl pres altında. Artık üretilmiyor. Elde kalan her parça antika; bu malzemeyi kullanmak bir şeyin sonuna dokunmak gibi.",
     accent: "#7a4a8a",
   },
   {
@@ -349,7 +349,7 @@ export const materials: Material[] = [
     scent: "Isıtılınca karbolik asit kokusu",
     color: "Siyah, koyu kahve, kırmızı-kahve — opak",
     rarity: "nadir",
-    note: "Dünyanın ilk tam sentetik plastiği. Günümüzde üretilmiyor; eski Osmanlı döneminden kalma bakelit tesbihler koleksiyonculuk açısından önemli.",
+    note: "Dünyanın ilk tam sentetik plastiği — 1907'de doğdu, bugün üretilmiyor. Osmanlı döneminden kalma bakelit tesbihler koleksiyoncular için ayrı bir yer tutar; tarihe dokunmak bu.",
     accent: "#2d1a0d",
   },
   {
@@ -361,7 +361,7 @@ export const materials: Material[] = [
     scent: "Hafif kamfor kokusu",
     color: "Şeffaf — her renkte, fildişi ve kehribar taklitleri yaygın",
     rarity: "çok nadir",
-    note: "Bakeliti önceleyen ilk plastik. Son derece yanıcı olduğundan kullanımı kısıtlandı. Eski selüloit tesbihler müze ve koleksiyoncuların ilgi alanında.",
+    note: "Bakeliti önceleyen ilk plastik. Çok yanıcı olduğu için yasaklandı — o yüzden az kaldı. Kalanlar müzelerde ve koleksiyonlarda; elinde selüloit olan bilir ne tuttuğunu.",
     accent: "#c4aa7a",
   },
 ];

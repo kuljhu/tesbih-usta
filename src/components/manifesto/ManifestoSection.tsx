@@ -38,13 +38,13 @@ export default function ManifestoSection() {
         <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-8">Utku Mert Tunçay</p>
 
         <blockquote className="font-serif text-3xl md:text-5xl lg:text-6xl font-light leading-snug text-cream">
-          Her tesbih bir kez yapılır.
+          Malzeme aklına düşmeden,
           <br />
-          <em className="text-gold not-italic">Bir daha yapılmaz.</em>
+          <em className="text-gold not-italic">gönlün kesime niyet etmeden.</em>
         </blockquote>
 
         <p className="mt-8 font-serif italic text-base md:text-lg text-muted">
-          İmamesindeki imzayı elinize aldığınızda görürsünüz.
+          Her tesbih böyle başlar.
         </p>
       </motion.div>
     </section>
