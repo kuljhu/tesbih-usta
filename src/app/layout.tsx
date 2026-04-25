@@ -18,11 +18,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Tesbih Ustası | El Yapımı Premium Tesbihler",
+  title: "UMT Prayer Beads | Utku Mert Tunçay",
   description:
     "Geleneksel ustalıkla şekillenen, nadir malzemelerden üretilen el yapımı premium tesbihler.",
   openGraph: {
-    title: "Tesbih Ustası | El Yapımı Premium Tesbihler",
+    title: "UMT Prayer Beads | Utku Mert Tunçay",
     description: "Geleneksel ustalıkla şekillenen, nadir malzemelerden üretilen el yapımı premium tesbihler.",
     locale: "tr_TR",
     type: "website",
