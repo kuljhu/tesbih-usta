@@ -18,10 +18,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "UMT Rosary Art | El Yapımı Premium Tesbihler",
-  description: "Geleneksel ustalıkla şekillenen, nadir malzemelerden üretilen el yapımı premium tesbihler.",
+  title: "Tesbih Ustası | El Yapımı Premium Tesbihler",
+  description:
+    "Geleneksel ustalıkla şekillenen, nadir malzemelerden üretilen el yapımı premium tesbihler.",
   openGraph: {
-    title: "UMT Rosary Art | El Yapımı Premium Tesbihler",
+    title: "Tesbih Ustası | El Yapımı Premium Tesbihler",
     description: "Geleneksel ustalıkla şekillenen, nadir malzemelerden üretilen el yapımı premium tesbihler.",
     locale: "tr_TR",
     type: "website",
@@ -30,9 +31,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="tr" className={`${cormorant.variable} ${dmSans.variable} h-full`}>
+    <html
+      lang="tr"
+      className={`${cormorant.variable} ${dmSans.variable} h-full`}
+    >
       <body className="min-h-full antialiased">{children}</body>
     </html>
   );

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  /* Renk sistemi */
   --ink:        #0d0905;
   --ink-soft:   #1a1310;
   --gold:       #c9a84c;
@@ -9,6 +10,10 @@
   --cream:      #f5efe6;
   --cream-dim:  #d9cfc4;
   --text-muted: #7a6e65;
+
+  /* Tipografi */
+  --font-serif: var(--font-cormorant);
+  --font-sans:  var(--font-dm-sans);
 }
 
 @theme inline {
@@ -39,26 +44,34 @@ html {
 body {
   background: var(--ink);
   color: var(--cream);
-  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
   min-height: 100dvh;
 }
 
+/* Altın çizgi yardımcısı */
 .gold-divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
+/* Masonry kolon yapısı — mobil öncelikli */
 .masonry {
   columns: 2;
   column-gap: 0.75rem;
 }
 
 @media (min-width: 768px) {
-  .masonry { columns: 3; column-gap: 1rem; }
+  .masonry {
+    columns: 3;
+    column-gap: 1rem;
+  }
 }
 
 @media (min-width: 1280px) {
-  .masonry { columns: 4; column-gap: 1.25rem; }
+  .masonry {
+    columns: 4;
+    column-gap: 1.25rem;
+  }
 }
 
 .masonry-item {
@@ -67,5 +80,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .masonry-item { margin-bottom: 1rem; }
+  .masonry-item {
+    margin-bottom: 1rem;
+  }
 }
