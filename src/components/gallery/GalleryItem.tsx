@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import type { GalleryItem } from "@/data/gallery";
 import { generateBIN } from "@/data/gallery";
 import { useTranslations } from "next-intl";
@@ -48,10 +48,51 @@ export default function GalleryItemCard({ item, index }: Props) {
   const t        = useTranslations("gallery.fields");
   const accent   = placeholderAccent[item.material] ?? "#1a1310";
   const bin      = generateBIN(item);
-  const imgRef   = useRef<HTMLDivElement>(null);
+  const imgRef        = useRef<HTMLDivElement>(null);
+  const touchActive   = useRef(false);
   const [origin, setOrigin] = useState({ x: 50, y: 50 });
   const [zoomed, setZoomed] = useState(false);
 
+  // Non-passive touchmove — sayfanın scroll'unu engeller, pan çalışır
+  useEffect(() => {
+    const el = imgRef.current;
+    if (!el) return;
+    const onTouchMove = (e: TouchEvent) => {
+      if (!touchActive.current) return;
+      e.preventDefault();
+      const t = e.touches[0];
+      const { left, top, width, height } = el.getBoundingClientRect();
+      setOrigin({
+        x: ((t.clientX - left)  / width)  * 100,
+        y: ((t.clientY - top)   / height) * 100,
+      });
+    };
+    el.addEventListener("touchmove", onTouchMove, { passive: false });
+    return () => el.removeEventListener("touchmove", onTouchMove);
+  }, []);
+
+  // Touch start → zoom in at finger position
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const el = imgRef.current;
+    if (!el) return;
+    const t = e.touches[0];
+    const { left, top, width, height } = el.getBoundingClientRect();
+    touchActive.current = true;
+    setOrigin({
+      x: ((t.clientX - left)  / width)  * 100,
+      y: ((t.clientY - top)   / height) * 100,
+    });
+    setZoomed(true);
+  };
+
+  // Touch end → zoom out
+  const handleTouchEnd = () => {
+    touchActive.current = false;
+    setZoomed(false);
+    setOrigin({ x: 50, y: 50 });
+  };
+
+  // Desktop mouse handlers
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const el = imgRef.current;
     if (!el) return;
@@ -79,7 +120,10 @@ export default function GalleryItemCard({ item, index }: Props) {
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className={`relative w-full ${aspectClass[item.aspect]} overflow-hidden rounded-lg cursor-crosshair`}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        onTouchCancel={handleTouchEnd}
+        className={`relative w-full ${aspectClass[item.aspect]} overflow-hidden rounded-lg cursor-crosshair touch-none`}
       >
         {item.src ? (
           <Image
