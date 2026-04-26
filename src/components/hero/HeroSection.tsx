@@ -75,13 +75,21 @@ export default function HeroSection() {
           className="font-serif text-cream"
         >
           <p className="text-2xl md:text-3xl font-light leading-relaxed mb-6">
-            Malzeme anlaşılmadan el kalkmaz.
+            Kusursuzluğun doğasında tekrar yoktur.
           </p>
-          <p className="text-base md:text-lg font-light leading-loose text-cream-dim max-w-lg mx-auto">
-            Utku Mert Tunçay her tesbihini bir kez yapar.
-            Her habbe ayrı bir malzeme, ayrı bir karar, ayrı bir sabır.
-            Elinize aldığınızda bunu anlarsınız.
-          </p>
+          <div className="text-base md:text-lg font-light leading-loose text-cream-dim max-w-lg mx-auto space-y-4">
+            <p>
+              Tesbih ustalığı gibi derin bir zanaatı ve felsefeyi kelimelere dökmek her zaman zordur;
+              Anlattığınız şey bir nesne değil, &ldquo;ruh&rdquo;, &ldquo;sabır&rdquo; ve &ldquo;tefekkür&rdquo; işidir.
+              Allah bilenlerden kılsın.
+            </p>
+            <p>
+              Usta her tesbihini bir kez yapar.
+              Her habbe ayrı bir malzeme, ayrı bir karar, ayrı bir sabır.
+              Habbeler katar katar dönerken imamenin urganında her anın canı var bu parmak uçlarında.
+              Allah görenlerden kılsın.
+            </p>
+          </div>
         </motion.div>
 
         {/* Ayırıcı */}
