@@ -88,5 +88,14 @@
       "collection": "مجموعه",
       "year": "سال"
     }
+  },
+  "contact": {
+    "eyebrow": "تماس",
+    "title": "سفارش و پرسش",
+    "description": "هر تسبیح به سفارش ساخته می‌شود. درباره جنس، شکل و تعداد دانه صحبت کنیم.",
+    "instagram": "اینستاگرام",
+    "whatsapp": "واتس‌اپ",
+    "instagram_handle": "@umt_rosary_art",
+    "cta": "ارسال پیام"
   }
 }

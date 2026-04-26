@@ -88,5 +88,14 @@
       "collection": "Collection",
       "year": "Year"
     }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Orders & Enquiries",
+    "description": "Every prayer bead is made to order. Let us talk about material, cut and bead count.",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp",
+    "instagram_handle": "@umt_rosary_art",
+    "cta": "Send Message"
   }
 }

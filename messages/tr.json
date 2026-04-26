@@ -88,5 +88,14 @@
       "collection": "Koleksiyon",
       "year": "Yıl"
     }
+  },
+  "contact": {
+    "eyebrow": "İletişim",
+    "title": "Sipariş & Sorular",
+    "description": "Her tesbih özel sipariş ile yapılır. Malzeme, kesim ve habbe sayısı hakkında konuşalım.",
+    "instagram": "Instagram",
+    "whatsapp": "WhatsApp",
+    "instagram_handle": "@umt_rosary_art",
+    "cta": "Mesaj Gönder"
   }
 }

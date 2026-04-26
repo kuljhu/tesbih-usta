@@ -88,5 +88,14 @@
       "collection": "المجموعة",
       "year": "السنة"
     }
+  },
+  "contact": {
+    "eyebrow": "تواصل معنا",
+    "title": "الطلبات والاستفسارات",
+    "description": "كل مسبحة تُصنع حسب الطلب. دعنا نتحدث عن المادة والشكل وعدد الحبّات.",
+    "instagram": "إنستغرام",
+    "whatsapp": "واتساب",
+    "instagram_handle": "@umt_rosary_art",
+    "cta": "أرسل رسالة"
   }
 }
