@@ -80,7 +80,7 @@ export default function HeroSection() {
           <div className="text-base md:text-lg font-light leading-loose text-cream-dim max-w-lg mx-auto space-y-4">
             <p>
               Tesbih ustalığı gibi derin bir zanaatı ve felsefeyi kelimelere dökmek her zaman zordur;
-              Anlattığınız şey bir nesne değil, &ldquo;ruh&rdquo;, &ldquo;sabır&rdquo; ve &ldquo;tefekkür&rdquo; işidir.
+              Yonttuğumuz şey bir nesne değil, &ldquo;ruh&rdquo;, &ldquo;sabır&rdquo; ve &ldquo;tefekkür&rdquo; işidir.
             </p>
             <p className="font-serif italic text-gold/70 text-sm">Allah bilenlerden kılsın.</p>
             <p>
