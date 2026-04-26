@@ -2,8 +2,10 @@
 
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 
 export default function ManifestoSection() {
+  const t = useTranslations("manifesto");
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -19,15 +21,10 @@ export default function ManifestoSection() {
       ref={ref}
       className="relative py-24 md:py-40 flex items-center justify-center overflow-hidden"
     >
-      {/* Arka plan: hafif altın halo */}
       <div
         className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 60% 40% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)",
-        }}
+        style={{ background: "radial-gradient(ellipse 60% 40% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)" }}
       />
-
       <div className="gold-divider absolute top-0 inset-x-0" />
       <div className="gold-divider absolute bottom-0 inset-x-0" />
 
@@ -35,16 +32,16 @@ export default function ManifestoSection() {
         style={{ scale, opacity }}
         className="relative z-10 px-6 max-w-4xl mx-auto text-center"
       >
-        <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-8">Utku Mert Tunçay</p>
+        <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-8">{t("author")}</p>
 
         <blockquote className="font-serif text-3xl md:text-5xl lg:text-6xl font-light leading-snug text-cream">
-          <em className="text-gold not-italic">Aceleye yer olmayan bir dünyadan,</em>
+          <em className="text-gold not-italic">{t("quote_em")}</em>
           <br />
-          ellerinize...
+          {t("quote_rest")}
         </blockquote>
 
         <p className="mt-8 font-serif italic text-base md:text-lg text-muted">
-          Bir habbe, her an, kusursuz bir sabır.
+          {t("subtitle")}
         </p>
       </motion.div>
     </section>

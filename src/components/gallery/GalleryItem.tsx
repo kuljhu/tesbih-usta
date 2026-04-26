@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import type { GalleryItem } from "@/data/gallery";
 import { generateBIN } from "@/data/gallery";
+import { useTranslations } from "next-intl";
 
 const aspectClass: Record<GalleryItem["aspect"], string> = {
   tall:   "aspect-[3/4]",
@@ -42,6 +43,7 @@ const placeholderAccent: Record<string, string> = {
 type Props = { item: GalleryItem; index: number };
 
 export default function GalleryItemCard({ item, index }: Props) {
+  const t      = useTranslations("gallery.fields");
   const accent = placeholderAccent[item.material] ?? "#1a1310";
   const bin    = generateBIN(item);
 
@@ -104,11 +106,11 @@ export default function GalleryItemCard({ item, index }: Props) {
         {/* Bilgiler */}
         <div className="grid grid-cols-2 gap-x-3 gap-y-1">
           {[
-            ["Malzeme",      item.material],
-            ["Kesim",        item.cut],
-            ["Habbe",        String(item.beadCount)],
-            ["Koleksiyon",   item.collection],
-            ["Yıl",          String(item.year)],
+            [t("material"),    item.material],
+            [t("cut"),         item.cut],
+            [t("beads"),       String(item.beadCount)],
+            [t("collection"),  item.collection],
+            [t("year"),        String(item.year)],
           ].map(([label, value]) => (
             <div key={label} className="flex flex-col">
               <span className="text-[9px] uppercase tracking-[0.2em] text-muted/50">{label}</span>

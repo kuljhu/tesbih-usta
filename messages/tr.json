@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "materials": "Malzemeler",
+    "cuts": "Kesimler",
+    "gallery": "Galeri",
+    "process": "Süreç",
+    "contact": "İletişim",
+    "tagline": "El Yapımı Tesbih Sanatı",
+    "logo_alt": "Usta · Utku Mert Tunçay"
+  },
+  "hero": {
+    "label": "Heykeltraş · Utku Mert Tunçay · El Yapımı Tesbih",
+    "headline": "Kusursuzluğun doğasında tekrar yoktur.",
+    "body1": "Tesbih ustalığı gibi derin bir zanaatı ve felsefeyi kelimelere dökmek her zaman zordur; Yonttuğumuz şey bir nesne değil, \"ruh\", \"sabır\" ve \"tefekkür\" işidir.",
+    "dua1": "Allah bilenlerden kılsın.",
+    "body2": "Usta her tesbihini bir kez yapar. Her habbe ayrı bir malzeme, ayrı bir karar, ayrı bir sabır. Habbeler katar katar dönerken imamenin urganında her anın canı var bu parmak uçlarında.",
+    "dua2": "Allah görenlerden kılsın.",
+    "tagline": "Sabrın Cisme Bürünen Hali",
+    "cta_gallery": "Eserleri Gör",
+    "cta_contact": "İletişim",
+    "seal": "Allah, \"Veysel Karanî\" hazretlerine layık olmak nasip etsin.",
+    "scroll": "Kaydır"
+  },
+  "manifesto": {
+    "author": "Utku Mert Tunçay",
+    "quote_em": "Aceleye yer olmayan bir dünyadan,",
+    "quote_rest": "ellerinize...",
+    "subtitle": "Bir habbe, her an, kusursuz bir sabır."
+  },
+  "materials": {
+    "eyebrow": "Hammaddeler",
+    "title": "Malzemeler & Özellikleri",
+    "description": "Ahşap, kemik, taş — tesbih bu üç kökten büyür. Her malzemenin kokusu, ağırlığı ve geçmişi birbirinden farklı. Sizin için hangisi olduğunu bulmak için okuyun.",
+    "categories": {
+      "ahşap": {
+        "label": "Ahşap",
+        "description": "Ormanın hafızası habbeye dönüşür. Ağacın damarları, kokusu ve yılları parmak uçlarında yaşar."
+      },
+      "kemik": {
+        "label": "Kemik",
+        "description": "Kadim bir malzeme — her habbe bir hayatın izini taşır. Fildişi beyazlığından sıcak bala uzanan bir renk yelpazesi."
+      },
+      "taş": {
+        "label": "Taş",
+        "description": "Milyonlarca yılın sıkıştırılmış sabırı. Taş tesbih ağır, soğuk ve sessizdir — her şeyin öncesini hatırlatır."
+      },
+      "sentetik": {
+        "label": "Reçine & Katalin",
+        "description": "Geleneksel reçine işçiliği; modern malzemeye kadim sabır. Kehribar sarısından derin morlara uzanan renk dünyası."
+      }
+    },
+    "rarity": {
+      "yaygın": "Yaygın",
+      "az bulunur": "Az Bulunur",
+      "nadir": "Nadir",
+      "çok nadir": "Çok Nadir"
+    },
+    "fields": {
+      "origin": "Köken",
+      "hardness": "Sertlik",
+      "scent": "Koku",
+      "color": "Renk"
+    }
+  },
+  "cuts": {
+    "eyebrow": "Osmanlı Dönemi",
+    "title": "Habbe Kesim Çeşitleri",
+    "description": "Aynı malzeme farklı kesimde farklı hissettirir. Osmanlı atölyelerinde her kesimin bir adı, bir sebebi vardı — bugün hâlâ geçerlidir. Eline en iyi oturanı buradan tanıyın.",
+    "eras": {
+      "klasik-osmanlı": "Klasik Osmanlı",
+      "istanbul-atölye": "İstanbul Atölye",
+      "evrensel": "Evrensel"
+    },
+    "views": {
+      "front": "Ön",
+      "top": "Üst",
+      "perspective": "Perspektif"
+    }
+  },
+  "gallery": {
+    "eyebrow": "Eserler",
+    "title": "Galeri",
+    "description": "Her tesbih bir kez yapılır, aynısı yapılmaz. Bunlar şimdiye kadar çıkanlardan. Sizin için hangisini yapalım?",
+    "fields": {
+      "material": "Malzeme",
+      "cut": "Kesim",
+      "beads": "Habbe",
+      "collection": "Koleksiyon",
+      "year": "Yıl"
+    }
+  }
+}

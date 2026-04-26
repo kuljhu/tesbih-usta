@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "materials": "Materials",
+    "cuts": "Cuts",
+    "gallery": "Gallery",
+    "process": "Process",
+    "contact": "Contact",
+    "tagline": "The Art of Prayer Bead Craftsmanship",
+    "logo_alt": "Master Carver · Utku Mert Tunçay"
+  },
+  "hero": {
+    "label": "Sculptor · Utku Mert Tunçay · Handcrafted Prayer Beads",
+    "headline": "Perfection by nature cannot repeat itself.",
+    "body1": "It is always difficult to put into words a craft and philosophy as deep as prayer bead mastery. What we carve is not an object, but the work of \"soul\", \"patience\" and \"contemplation\".",
+    "dua1": "May Allah grant us to be among those who know.",
+    "body2": "The master makes each prayer bead once. Each bead a different material, a different decision, a different patience. As the beads turn on the imam cord, the essence of every moment lives at these fingertips.",
+    "dua2": "May Allah grant us to be among those who see.",
+    "tagline": "Patience Given Form",
+    "cta_gallery": "View Works",
+    "cta_contact": "Contact",
+    "seal": "May Allah grant us to be worthy of the blessed Veysel Karanî.",
+    "scroll": "Scroll"
+  },
+  "manifesto": {
+    "author": "Utku Mert Tunçay",
+    "quote_em": "From a world where there is no room for haste,",
+    "quote_rest": "to your hands...",
+    "subtitle": "One bead, every moment, perfect patience."
+  },
+  "materials": {
+    "eyebrow": "Raw Materials",
+    "title": "Materials & Properties",
+    "description": "Wood, bone, stone — the prayer bead grows from these three roots. Each material has a different scent, weight and history. Read to discover which one is yours.",
+    "categories": {
+      "ahşap": {
+        "label": "Wood",
+        "description": "The memory of the forest takes the form of a bead. The grain, scent and years of the tree live at the fingertips."
+      },
+      "kemik": {
+        "label": "Bone",
+        "description": "An ancient material — each bead carries the trace of a life. A palette ranging from ivory white to warm honey."
+      },
+      "taş": {
+        "label": "Stone",
+        "description": "Millions of years of compressed patience. Stone prayer beads are heavy, cool and silent — a reminder of what came before everything."
+      },
+      "sentetik": {
+        "label": "Resin & Katalin",
+        "description": "Traditional resin craftsmanship; ancient patience in a modern material. A world of colour from amber yellow to deep purples."
+      }
+    },
+    "rarity": {
+      "yaygın": "Common",
+      "az bulunur": "Uncommon",
+      "nadir": "Rare",
+      "çok nadir": "Very Rare"
+    },
+    "fields": {
+      "origin": "Origin",
+      "hardness": "Hardness",
+      "scent": "Scent",
+      "color": "Colour"
+    }
+  },
+  "cuts": {
+    "eyebrow": "Ottoman Period",
+    "title": "Bead Cut Varieties",
+    "description": "The same material feels different with a different cut. In Ottoman workshops each cut had a name and a reason — still valid today. Find the one that sits best in your hand.",
+    "eras": {
+      "klasik-osmanlı": "Classical Ottoman",
+      "istanbul-atölye": "Istanbul Workshop",
+      "evrensel": "Universal"
+    },
+    "views": {
+      "front": "Front",
+      "top": "Top",
+      "perspective": "3D"
+    }
+  },
+  "gallery": {
+    "eyebrow": "Works",
+    "title": "Gallery",
+    "description": "Each prayer bead is made once, never the same again. These are from what has been created so far. Which one shall we make for you?",
+    "fields": {
+      "material": "Material",
+      "cut": "Cut",
+      "beads": "Beads",
+      "collection": "Collection",
+      "year": "Year"
+    }
+  }
+}

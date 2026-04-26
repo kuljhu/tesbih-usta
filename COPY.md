@@ -32,12 +32,17 @@ CTA          : İletişim
 Üst etiket : Heykeltraş · Utku Mert Tunçay · El Yapımı Tesbih
 
 Ana cümle  :
-  Malzeme anlaşılmadan el kalkmaz.
+  Kusursuzluğun doğasında tekrar yoktur.
 
 Destek metni :
-  Utku Mert Tunçay her tesbihini bir kez yapar.
+  Tesbih ustalığı gibi derin bir zanaatı ve felsefeyi kelimelere dökmek her zaman zordur;
+  Anlattığınız şey bir nesne değil, "ruh", "sabır" ve "tefekkür" işidir.
+  Allah bilenlerden kılsın.
+
+  Usta her tesbihini bir kez yapar.
   Her habbe ayrı bir malzeme, ayrı bir karar, ayrı bir sabır.
-  Elinize aldığınızda bunu anlarsınız.
+  Habbeler katar katar dönerken imamenin urganında her anın canı var bu parmak uçlarında. 
+  Allah görenlerden kılsın.
 
 İtalik :
   Sabrın Cisme Bürünen Hali
