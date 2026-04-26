@@ -11,6 +11,7 @@ export type Material = {
   rarity: "yaygın" | "nadir" | "çok nadir";
   note: string;
   accent: string;
+  image?: string;
 };
 
 export const categoryMeta: Record<MaterialCategory, { label: string; description: string }> = {
@@ -45,6 +46,7 @@ export const materials: Material[] = [
     rarity: "nadir",
     note: "CITES koruma listesinde. Kokuyu bir kez aldınız mı, tesbihin neden gül odunundan yapıldığını anlarsınız — her zikir seansında hafif çiçeksi bir his. Habbeler kullandıkça parlar, değerlenir.",
     accent: "#8b4254",
+    image: "/images/materials/gul-odunu.jpg",
   },
   {
     id: "abanoz",
@@ -57,6 +59,7 @@ export const materials: Material[] = [
     rarity: "nadir",
     note: "Dünyanın en ağır ve en sert odunlarından biri. Ele aldığınızda soğukluğu fark edersiniz — bu abanozun sizi tartmasıdır. Polisajla gelen ayna parlaklığı bir hata affetmez; ustanın elini doğrudan size taşır.",
     accent: "#1a1208",
+    image: "/images/materials/abanoz.jpg",
   },
   {
     id: "oud",
@@ -69,6 +72,7 @@ export const materials: Material[] = [
     rarity: "çok nadir",
     note: "Phialophora fungi enfeksiyonuna yanıt olarak ağacın ürettiği reçineden elde edilir. Gram başına altından pahalı olabilir — ama kokusu bir kez elinizdeyken anlarsınız neden. Üzerinizde kalır. Bu isteyerek yapılmış bir şeydir.",
     accent: "#3d1f0d",
+    image: "/images/materials/oud.jpg",
   },
   {
     id: "simsir",
@@ -81,6 +85,7 @@ export const materials: Material[] = [
     rarity: "nadir",
     note: "Türkiye'nin en sert ve en ağır odunlarından biri. Büyük boy şimşir bulmak giderek zorlaşıyor — her büyük parça kendi içinde bir son. Elde kalan değerleniyor; bu da haklı.",
     accent: "#c8a84b",
+    image: "/images/materials/simsir.jpg",
   },
   {
     id: "sandal",
@@ -93,6 +98,7 @@ export const materials: Material[] = [
     rarity: "nadir",
     note: "Yüzyıllardır tapınak ve tekkelerde kullanılıyor — boşuna değil. Sandal kokusunun zihni açtığına dair bir şey var; elinizdeyken fark edersiniz. Mysore sandali en değerli çeşit.",
     accent: "#c4956a",
+    image: "/images/materials/sandal.jpg",
   },
   {
     id: "pelesenk",
@@ -117,6 +123,7 @@ export const materials: Material[] = [
     rarity: "yaygın",
     note: "Akdeniz'in kadim ağacı. Ne kadar yaşlıysa desen o kadar derin, o kadar anlamlı. Her habbe başka görünür — mukaddes coğrafyalarda yetişen ağaçlardan üretilenler ayrıca değerlenir.",
     accent: "#6b7c3a",
+    image: "/images/materials/zeytin.jpg",
   },
   {
     id: "kuka",
@@ -129,6 +136,7 @@ export const materials: Material[] = [
     rarity: "yaygın",
     note: "Osmanlı hekimlerinin tercihiydi — antimikrobiyal özelliğiyle ünlüdür. Ama asıl özelliği şu: kullandıkça koyulaşır, elin geçmişini tutar. Her tesbih sahibiyle birlikte renklenir.",
     accent: "#7a4f28",
+    image: "/images/materials/kuka.jpg",
   },
   {
     id: "narcil",
@@ -141,6 +149,7 @@ export const materials: Material[] = [
     rarity: "yaygın",
     note: "\"Bitkisel fildişi\" derler. Gerçek fildişinden ayırt etmek neredeyse imkânsız — elde hissi, ağırlığı, rengi. Fil avına etik bir alternatif olarak 19. yüzyılda keşfedildi; yerinde bir keşifti.",
     accent: "#d4c5a0",
+    image: "/images/materials/narcil.jpg",
   },
   {
     id: "hurma-cekirdegi",
@@ -153,6 +162,7 @@ export const materials: Material[] = [
     rarity: "yaygın",
     note: "Tesbihin başladığı yer burası. Veysel Karanî'nin ilk sayı tuttuğu malzeme olduğu rivayet edilir. Mütevazı, sade — kökeni bilenler için bu sadelik başlı başına bir değerdir.",
     accent: "#3a2010",
+    image: "/images/materials/hurma-cekirdegi.jpg",
   },
 
   // ── KEMİK & ORGANİK ────────────────────────────────────────────────────
@@ -167,6 +177,7 @@ export const materials: Material[] = [
     rarity: "nadir",
     note: "40–60 milyon yıllık çam reçinesinin fosilleşmesiyle oluşur. Elde ısınınca kokuyu bırakır — o an, milyonlarca yıl önce başlayan bir şeyin devamıdır. Tuz suyunda yüzer, sürtünmeyle statik elektrik üretir; bu iki test sahteyi ayırt eder.",
     accent: "#c9822a",
+    image: "/images/materials/kehribar.jpg",
   },
   {
     id: "damla-kehribar",
@@ -179,6 +190,7 @@ export const materials: Material[] = [
     rarity: "çok nadir",
     note: "Baltık kehribarından farklı kimyasal yapısı ve çok daha güçlü kokusuyla ayrışır. Yemen damla kehribarını koleksiyoncular yıllarca arar — elinizde tuttuğunuzu bilin.",
     accent: "#d4a017",
+    image: "/images/materials/damla-kehribar.jpg",
   },
   {
     id: "sedef",
@@ -191,6 +203,7 @@ export const materials: Material[] = [
     rarity: "yaygın",
     note: "İnci istiridyesinin iç tabakasından elde edilir. Işık nereden gelirse gelsin farklı bir renk çıkar. Doyulmaz bir malzeme — izlemekten bıkamazsınız.",
     accent: "#d4c5b0",
+    image: "/images/materials/sedef.jpg",
   },
   {
     id: "mercan",
@@ -203,6 +216,7 @@ export const materials: Material[] = [
     rarity: "çok nadir",
     note: "Corallium rubrum türü, deniz dibinden el ile toplanır. Her habbesi ayrı ayrı şekillendirilir — her biri bir süreçti, bir karardı. Derinliğine göre rengi değişir; tekrar edilemez.",
     accent: "#c0392b",
+    image: "/images/materials/mercan.jpg",
   },
   {
     id: "mamut-disi",
@@ -215,6 +229,7 @@ export const materials: Material[] = [
     rarity: "çok nadir",
     note: "10.000 yılı aşkın süre Sibirya buzulunun altındaydı. Gerçek fildişiyle aynı doku, aynı ağırlık — şimdi elde. Bu kadar eski bir şeyi tutmak farklı hissettiriyor.",
     accent: "#c9b99a",
+    image: "/images/materials/mamut-disi.jpg",
   },
   {
     id: "deve-kemigi",
@@ -253,6 +268,7 @@ export const materials: Material[] = [
     rarity: "nadir",
     note: "Dünyanın tek yerinden çıkar — Erzurum'un Oltu ilçesi. Her gram bir coğrafyadır. Dünya rezervlerinin büyük çoğunluğu bu topraklarda; bir gün biter.",
     accent: "#1c1c1c",
+    image: "/images/materials/oltu.jpg",
   },
   {
     id: "firuze",
@@ -265,6 +281,7 @@ export const materials: Material[] = [
     rarity: "nadir",
     note: "Bakır minerallerinden oluşan opak bir taş. İran sarayından geçmiş, koleksiyonlarda kalmış — bugün elde. Nişapur firuzesinin matriks desenleri her taşı tekil kılar; iki tanesi aynı değildir.",
     accent: "#2980b9",
+    image: "/images/materials/firuze.jpg",
   },
   {
     id: "akik",
@@ -277,6 +294,7 @@ export const materials: Material[] = [
     rarity: "yaygın",
     note: "Hz. Peygamber'in yüzük taşı olarak rivayet edilir. Bu kadar köklü bir tercih boşuna olmaz. Yemen akiki rengi ve damarıyla en değerlisi — onu elde tutmak tarihin içinde durmak gibi.",
     accent: "#c0392b",
+    image: "/images/materials/akik.jpg",
   },
   {
     id: "lapis",
@@ -289,6 +307,7 @@ export const materials: Material[] = [
     rarity: "nadir",
     note: "5.000 yıldır aynı Badehşan madenlerinden çıkıyor. Osmanlı minyatürlerindeki o mavi buradandı. Altın pirit noktaları yıldızlı gece gibi — bakınca bırakmak zor.",
     accent: "#1a3a6e",
+    image: "/images/materials/lapis.jpg",
   },
   {
     id: "oniks",
@@ -301,6 +320,7 @@ export const materials: Material[] = [
     rarity: "yaygın",
     note: "Akikin siyah ve beyaz bantlı çeşidi. Abanoz kadar siyah, ondan daha sert — ikisi arasında tercih zordur. Yüksek polisajla elde edilen derinlik bakışı tutar.",
     accent: "#1a1a1a",
+    image: "/images/materials/oniks.jpg",
   },
   {
     id: "ametist",
@@ -313,6 +333,7 @@ export const materials: Material[] = [
     rarity: "yaygın",
     note: "Kuvars ailesinin mor üyesi. Lavantadan koyu mora değişen tonlar — her açıda başka bir tesbih. Koyu ve eşit renkli taşlar koleksiyonculuk için tercih edilir; rengin derinliği değerin derinliğidir.",
     accent: "#6b3fa0",
+    image: "/images/materials/ametist.jpg",
   },
 
   // ── SENTETİK ───────────────────────────────────────────────────────────
@@ -327,6 +348,7 @@ export const materials: Material[] = [
     rarity: "nadir",
     note: "1950'de üretimi durdu — stok giderek azalıyor. Gerçek katalin zamanla renk değiştirir; koleksiyoncular bu yaşlanmayı güzellik sayar. Isıtılınca bıraktığı fenolik koku sahte plastikten ayırt ettirir.",
     accent: "#c9942a",
+    image: "/images/materials/katalin.jpg",
   },
   {
     id: "galalith",
@@ -339,6 +361,7 @@ export const materials: Material[] = [
     rarity: "çok nadir",
     note: "Süttan yapıldı — kazein proteini, bir yıl pres altında. Artık üretilmiyor. Elde kalan her parça antika; bu malzemeyi kullanmak bir şeyin sonuna dokunmak gibi.",
     accent: "#7a4a8a",
+    image: "/images/materials/galalith.jpg",
   },
   {
     id: "bakelit",
@@ -351,6 +374,7 @@ export const materials: Material[] = [
     rarity: "nadir",
     note: "Dünyanın ilk tam sentetik plastiği — 1907'de doğdu, bugün üretilmiyor. Osmanlı döneminden kalma bakelit tesbihler koleksiyoncular için ayrı bir yer tutar; tarihe dokunmak bu.",
     accent: "#2d1a0d",
+    image: "/images/materials/bakelit.png",
   },
   {
     id: "seluloit",
@@ -363,5 +387,6 @@ export const materials: Material[] = [
     rarity: "çok nadir",
     note: "Bakeliti önceleyen ilk plastik. Çok yanıcı olduğu için yasaklandı — o yüzden az kaldı. Kalanlar müzelerde ve koleksiyonlarda; elinde selüloit olan bilir ne tuttuğunu.",
     accent: "#c4aa7a",
+    image: "/images/materials/seluloit.jpg",
   },
 ];

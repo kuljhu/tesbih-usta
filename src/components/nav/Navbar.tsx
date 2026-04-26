@@ -75,6 +75,7 @@ export default function Navbar() {
                 width={52}
                 height={52}
                 className="rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300 mix-blend-screen"
+                style={{ width: 52, height: 52 }}
                 priority
               />
               <span className="hidden md:block text-[9px] uppercase tracking-[0.3em] text-cream/50 group-hover:text-gold/70 transition-colors duration-300">
