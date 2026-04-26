@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRef, useState } from "react";
 import type { GalleryItem } from "@/data/gallery";
 import { generateBIN } from "@/data/gallery";
 import { useTranslations } from "next-intl";
@@ -44,9 +45,25 @@ const placeholderAccent: Record<string, string> = {
 type Props = { item: GalleryItem; index: number };
 
 export default function GalleryItemCard({ item, index }: Props) {
-  const t      = useTranslations("gallery.fields");
-  const accent = placeholderAccent[item.material] ?? "#1a1310";
-  const bin    = generateBIN(item);
+  const t        = useTranslations("gallery.fields");
+  const accent   = placeholderAccent[item.material] ?? "#1a1310";
+  const bin      = generateBIN(item);
+  const imgRef   = useRef<HTMLDivElement>(null);
+  const [origin, setOrigin] = useState({ x: 50, y: 50 });
+  const [zoomed, setZoomed] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = imgRef.current;
+    if (!el) return;
+    const { left, top, width, height } = el.getBoundingClientRect();
+    setOrigin({
+      x: ((e.clientX - left)  / width)  * 100,
+      y: ((e.clientY - top)   / height) * 100,
+    });
+  };
+
+  const handleMouseEnter = () => setZoomed(true);
+  const handleMouseLeave = () => { setZoomed(false); setOrigin({ x: 50, y: 50 }); };
 
   return (
     <motion.div
@@ -57,14 +74,27 @@ export default function GalleryItemCard({ item, index }: Props) {
       className="masonry-item group"
     >
       {/* Fotoğraf */}
-      <div className={`relative w-full ${aspectClass[item.aspect]} overflow-hidden rounded-lg`}>
+      <div
+        ref={imgRef}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className={`relative w-full ${aspectClass[item.aspect]} overflow-hidden rounded-lg cursor-crosshair`}
+      >
         {item.src ? (
           <Image
             src={item.src}
             alt={item.alt}
             fill
             sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.18]"
+            className="object-cover"
+            style={{
+              transform: zoomed ? "scale(2.4)" : "scale(1)",
+              transformOrigin: `${origin.x}% ${origin.y}%`,
+              transition: zoomed
+                ? "transform 0.15s ease-out"
+                : "transform 0.4s ease-out, transform-origin 0s",
+            }}
           />
         ) : (
           <div
