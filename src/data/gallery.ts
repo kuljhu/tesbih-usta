@@ -1,19 +1,38 @@
+export type CollectionType = "Özel Koleksiyon" | "UMT Koleksiyonu" | "Müzelik";
+
 export type GalleryItem = {
   id: string;
-  src: string | null;       // null → placeholder
+  src: string | null;
   alt: string;
   material: string;
+  materialCode: string;  // KEH, ABA, KUK …
   cut: string;
-  aspect: "tall" | "wide" | "square"; // masonry yükseklik tonu
+  cutCode: string;       // BYZ, KRV, SLG …
+  beadCount: number;
+  year: number;
+  collection: CollectionType;
+  collectionCode: "P" | "U" | "M";
+  aspect: "tall" | "wide" | "square";
 };
+
+export function generateBIN(item: GalleryItem): string {
+  const yr = String(item.year).slice(-2);
+  return `B${yr}${item.materialCode}${item.cutCode}${item.beadCount}-${item.collectionCode}`;
+}
 
 export const galleryItems: GalleryItem[] = [
   {
     id: "g1",
-    src: null,
-    alt: "Damla kehribar miskevi kesim tesbih",
-    material: "Damla Kehribar",
-    cut: "Şalgamî",
+    src: "/images/gallery/g1.jpg",
+    alt: "Kehribar beyzi kesim 33 habbe tesbih",
+    material: "Kehribar",
+    materialCode: "KEH",
+    cut: "Beyzi",
+    cutCode: "BYZ",
+    beadCount: 33,
+    year: 2025,
+    collection: "Özel Koleksiyon",
+    collectionCode: "P",
     aspect: "tall",
   },
   {
@@ -21,15 +40,27 @@ export const galleryItems: GalleryItem[] = [
     src: null,
     alt: "Abanoz kütük kesim tesbih",
     material: "Abanoz",
+    materialCode: "ABA",
     cut: "Kütük",
+    cutCode: "KTK",
+    beadCount: 33,
+    year: 2025,
+    collection: "UMT Koleksiyonu",
+    collectionCode: "U",
     aspect: "square",
   },
   {
     id: "g3",
     src: null,
-    alt: "Kırmızı mercan kürevî tesbih detay",
+    alt: "Kırmızı mercan kürevî tesbih",
     material: "Kırmızı Mercan",
+    materialCode: "MRC",
     cut: "Kürevî",
+    cutCode: "KRV",
+    beadCount: 33,
+    year: 2024,
+    collection: "Özel Koleksiyon",
+    collectionCode: "P",
     aspect: "tall",
   },
   {
@@ -37,15 +68,27 @@ export const galleryItems: GalleryItem[] = [
     src: null,
     alt: "Öd ağacı beyzi kesim tesbih",
     material: "Öd Ağacı",
+    materialCode: "ODA",
     cut: "Beyzi",
+    cutCode: "BYZ",
+    beadCount: 99,
+    year: 2024,
+    collection: "Özel Koleksiyon",
+    collectionCode: "P",
     aspect: "wide",
   },
   {
     id: "g5",
     src: null,
-    alt: "Kehribar damla kesim habbe detay",
-    material: "Kehribar",
-    cut: "Damla",
+    alt: "Damla kehribar şalgamî kesim tesbih",
+    material: "Damla Kehribar",
+    materialCode: "DKH",
+    cut: "Şalgamî",
+    cutCode: "SLG",
+    beadCount: 33,
+    year: 2025,
+    collection: "UMT Koleksiyonu",
+    collectionCode: "U",
     aspect: "square",
   },
   {
@@ -53,7 +96,13 @@ export const galleryItems: GalleryItem[] = [
     src: null,
     alt: "Pelesenk arpa kesim tesbih",
     material: "Pelesenk",
+    materialCode: "PEL",
     cut: "Arpa",
+    cutCode: "ARP",
+    beadCount: 33,
+    year: 2023,
+    collection: "Özel Koleksiyon",
+    collectionCode: "P",
     aspect: "tall",
   },
   {
@@ -61,7 +110,13 @@ export const galleryItems: GalleryItem[] = [
     src: null,
     alt: "Firuze faseteli tesbih",
     material: "Firuze",
+    materialCode: "FRZ",
     cut: "Faseteli",
+    cutCode: "FST",
+    beadCount: 33,
+    year: 2025,
+    collection: "Özel Koleksiyon",
+    collectionCode: "P",
     aspect: "square",
   },
   {
@@ -69,7 +124,13 @@ export const galleryItems: GalleryItem[] = [
     src: null,
     alt: "Gül odunu sığırcık kesim tesbih",
     material: "Gül Odunu",
+    materialCode: "GUL",
     cut: "Sığırcık",
+    cutCode: "SIG",
+    beadCount: 33,
+    year: 2024,
+    collection: "UMT Koleksiyonu",
+    collectionCode: "U",
     aspect: "tall",
   },
   {
@@ -77,15 +138,27 @@ export const galleryItems: GalleryItem[] = [
     src: null,
     alt: "Katalin şalgamî eski Osmanlı tesbih",
     material: "Katalin",
+    materialCode: "KAT",
     cut: "Şalgamî",
+    cutCode: "SLG",
+    beadCount: 99,
+    year: 2023,
+    collection: "Özel Koleksiyon",
+    collectionCode: "P",
     aspect: "wide",
   },
   {
     id: "g10",
     src: null,
-    alt: "Lapis lazuli küre tesbih",
+    alt: "Lapis lazuli kürevî tesbih",
     material: "Lapis Lazuli",
+    materialCode: "LAP",
     cut: "Kürevî",
+    cutCode: "KRV",
+    beadCount: 33,
+    year: 2025,
+    collection: "Özel Koleksiyon",
+    collectionCode: "P",
     aspect: "square",
   },
   {
@@ -93,7 +166,13 @@ export const galleryItems: GalleryItem[] = [
     src: null,
     alt: "Mamut dişi beyzi kesim tesbih",
     material: "Mamut Dişi",
+    materialCode: "MAM",
     cut: "Beyzi",
+    cutCode: "BYZ",
+    beadCount: 33,
+    year: 2024,
+    collection: "UMT Koleksiyonu",
+    collectionCode: "U",
     aspect: "tall",
   },
   {
@@ -101,9 +180,13 @@ export const galleryItems: GalleryItem[] = [
     src: null,
     alt: "Oltu taşı fıçı kesim tesbih",
     material: "Oltu Taşı",
+    materialCode: "OLT",
     cut: "Fıçı",
+    cutCode: "FCI",
+    beadCount: 33,
+    year: 2023,
+    collection: "Özel Koleksiyon",
+    collectionCode: "P",
     aspect: "square",
   },
 ];
-
-// Gerçek fotoğraf gelince: src: "/images/gallery/g1.jpg" yap

@@ -37,16 +37,6 @@ export default function GallerySection() {
         </div>
       </div>
 
-      {/* Alt not — fotoğraflar gelince kaldırılır */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.4 }}
-        className="text-center mt-12 text-xs text-muted/40 italic px-4"
-      >
-        Fotoğraflar ekleniyor.
-      </motion.p>
     </section>
   );
 }
