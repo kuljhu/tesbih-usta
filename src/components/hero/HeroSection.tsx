@@ -81,14 +81,14 @@ export default function HeroSection() {
             <p>
               Tesbih ustalığı gibi derin bir zanaatı ve felsefeyi kelimelere dökmek her zaman zordur;
               Anlattığınız şey bir nesne değil, &ldquo;ruh&rdquo;, &ldquo;sabır&rdquo; ve &ldquo;tefekkür&rdquo; işidir.
-              Allah bilenlerden kılsın.
             </p>
+            <p className="font-serif italic text-gold/70 text-sm">Allah bilenlerden kılsın.</p>
             <p>
               Usta her tesbihini bir kez yapar.
               Her habbe ayrı bir malzeme, ayrı bir karar, ayrı bir sabır.
               Habbeler katar katar dönerken imamenin urganında her anın canı var bu parmak uçlarında.
-              Allah görenlerden kılsın.
             </p>
+            <p className="font-serif italic text-gold/70 text-sm">Allah görenlerden kılsın.</p>
           </div>
         </motion.div>
 
