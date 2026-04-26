@@ -64,7 +64,7 @@ export default function HeroSection() {
           transition={{ duration: 1.2, delay: 0.3 }}
           className="text-[10px] uppercase text-gold mb-8 tracking-[0.3em]"
         >
-          Utku Mert Tunçay · El Yapımı Tesbih
+          Heykeltraş · Utku Mert Tunçay · El Yapımı Tesbih
         </motion.p>
 
         {/* Ana metin */}
@@ -99,7 +99,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 1.4 }}
           className="font-serif italic text-sm md:text-base text-muted"
         >
-          Güzel bir tesbih elinden düşmez. Bunu kendi kendine anlarsınız.
+          Sabrın Cisme Bürünen Hali
         </motion.p>
 
         {/* CTA */}
@@ -116,10 +116,10 @@ export default function HeroSection() {
             Eserleri Gör
           </a>
           <a
-            href="#siparis"
+            href="#iletisim"
             className="text-xs uppercase tracking-[0.2em] text-cream-dim hover:text-gold transition-colors duration-300 underline underline-offset-4 decoration-gold/30"
           >
-            Sipariş Ver
+            İletişim
           </a>
         </motion.div>
 
@@ -130,7 +130,7 @@ export default function HeroSection() {
           transition={{ duration: 1, delay: 2.2 }}
           className="mt-12 text-[11px] text-muted/60 font-serif italic"
         >
-          Veysel Karanî hazretlerine layık olmak nasip etsin.
+          Allah, "Veysel Karanî" hazretlerine layık olmak nasip etsin.
         </motion.p>
       </motion.div>
 

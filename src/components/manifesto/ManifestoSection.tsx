@@ -38,13 +38,13 @@ export default function ManifestoSection() {
         <p className="text-[10px] uppercase tracking-[0.4em] text-gold mb-8">Utku Mert Tunçay</p>
 
         <blockquote className="font-serif text-3xl md:text-5xl lg:text-6xl font-light leading-snug text-cream">
-          Malzeme aklına düşmeden,
+          <em className="text-gold not-italic">Aceleye yer olmayan bir dünyadan,</em>
           <br />
-          <em className="text-gold not-italic">gönlün kesime niyet etmeden.</em>
+          ellerinize...
         </blockquote>
 
         <p className="mt-8 font-serif italic text-base md:text-lg text-muted">
-          Her tesbih böyle başlar.
+          Bir habbe, her an, kusursuz bir sabır.
         </p>
       </motion.div>
     </section>

@@ -71,7 +71,7 @@ export default function Navbar() {
             <a href="#" className="flex flex-col items-center gap-1 group">
               <Image
                 src="/images/logo.png"
-                alt="UMT — Utku Mert Tunçay"
+                alt="Master Carver | Utku Mert Tunçay"
                 width={52}
                 height={52}
                 className="rounded-full opacity-80 group-hover:opacity-100 transition-opacity duration-300 mix-blend-screen"
@@ -79,7 +79,7 @@ export default function Navbar() {
                 priority
               />
               <span className="hidden md:block text-[9px] uppercase tracking-[0.3em] text-cream/50 group-hover:text-gold/70 transition-colors duration-300">
-                Prayer Beads
+                The Art of Prayer Bead Craftsmanship
               </span>
             </a>
           </div>
@@ -99,7 +99,7 @@ export default function Navbar() {
               href="#siparis"
               className="ml-2 rounded-full border border-gold/50 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold hover:bg-gold hover:text-ink transition-all duration-300"
             >
-              Sipariş
+              İletişim
             </a>
           </div>
 
@@ -109,7 +109,7 @@ export default function Navbar() {
               href="#siparis"
               className="rounded-full border border-gold/50 px-3 py-1 text-[10px] uppercase tracking-[0.15em] text-gold"
             >
-              Sipariş
+              İletişim
             </a>
           </div>
         </nav>
