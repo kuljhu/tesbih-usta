@@ -135,7 +135,7 @@ export default function Navbar() {
               )}
             </div>
 
-            <a href="#siparis" className="ml-1 rounded-full border border-gold/50 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold hover:bg-gold hover:text-ink transition-all duration-300">
+            <a href="#iletisim" className="ml-1 rounded-full border border-gold/50 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold hover:bg-gold hover:text-ink transition-all duration-300">
               {t("contact")}
             </a>
           </div>
@@ -163,7 +163,7 @@ export default function Navbar() {
                 </div>
               )}
             </div>
-            <a href="#siparis" className="rounded-full border border-gold/50 px-3 py-1 text-[10px] uppercase tracking-[0.15em] text-gold">
+            <a href="#iletisim" className="rounded-full border border-gold/50 px-3 py-1 text-[10px] uppercase tracking-[0.15em] text-gold">
               {t("contact")}
             </a>
           </div>
@@ -200,7 +200,7 @@ export default function Navbar() {
         ))}
 
         <motion.a
-          href="#siparis"
+          href="#iletisim"
           onClick={() => setMenuOpen(false)}
           initial={{ opacity: 0 }}
           animate={menuOpen ? { opacity: 1 } : { opacity: 0 }}
