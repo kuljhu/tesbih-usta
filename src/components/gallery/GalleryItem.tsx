@@ -12,18 +12,24 @@ const aspectClass: Record<GalleryItem["aspect"], string> = {
 };
 
 const placeholderAccent: Record<string, string> = {
-  "Kehribar":        "#b87820",
-  "Damla Kehribar":  "#c9822a",
-  "Abanoz":          "#1a1208",
-  "Kırmızı Mercan":  "#7a1f1f",
-  "Öd Ağacı":        "#2a1205",
-  "Pelesenk":        "#3d1a2e",
-  "Firuze":          "#1a4a5e",
-  "Gül Odunu":       "#5a2535",
-  "Katalin":         "#8a5a10",
-  "Lapis Lazuli":    "#0f2245",
-  "Mamut Dişi":      "#8a7a5a",
-  "Oltu Taşı":       "#1a1a1a",
+  "Kehribar":           "#b87820",
+  "Kehribar (Yumurta)": "#d4920a",
+  "Kehribar (Açık)":    "#d4c878",
+  "Kehribar (Doğal)":   "#8a4510",
+  "Damla Kehribar":     "#c9822a",
+  "Pelesenk":           "#3d1208",
+  "Kuka":               "#7a4a18",
+  "Yeşim":              "#1a4a2e",
+  "Ametist":            "#3d1a5e",
+  "Abanoz":             "#1a1208",
+  "Kırmızı Mercan":     "#7a1f1f",
+  "Öd Ağacı":           "#2a1205",
+  "Firuze":             "#1a4a5e",
+  "Gül Odunu":          "#5a2535",
+  "Katalin":            "#8a5a10",
+  "Lapis Lazuli":       "#0f2245",
+  "Mamut Dişi":         "#8a7a5a",
+  "Oltu Taşı":          "#1a1a1a",
 };
 
 type Props = { item: GalleryItem; index: number };
