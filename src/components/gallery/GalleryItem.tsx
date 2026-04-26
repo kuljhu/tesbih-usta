@@ -14,6 +14,7 @@ const aspectClass: Record<GalleryItem["aspect"], string> = {
 
 const placeholderAccent: Record<string, string> = {
   "Kehribar":             "#b87820",
+  "Sıkma Zar Bakalit":   "#8a6510",
   "Kehribar (Yumurta)":   "#d4920a",
   "Kehribar (Açık)":      "#d4c878",
   "Kehribar (Doğal)":     "#8a4510",

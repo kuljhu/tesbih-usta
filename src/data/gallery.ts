@@ -25,9 +25,9 @@ export const galleryItems: GalleryItem[] = [
   {
     id: "g1",
     src: "/images/gallery/g1.jpg",
-    alt: "Kehribar beyzi kesim 33 habbe yeşil ipli tesbih",
-    material: "Kehribar",
-    materialCode: "KEH",
+    alt: "Sıkma zar bakalit beyzi kesim 33 habbe yeşil ipli tesbih",
+    material: "Sıkma Zar Bakalit",
+    materialCode: "SZB",
     cut: "Beyzi",
     cutCode: "BYZ",
     beadCount: 33,
